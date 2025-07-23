@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 32px 28px 24px 28px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #f76b1c;
+    letter-spacing: 1px;
+}
+
+#habit-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+#habit-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #fda085;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+#habit-input:focus {
+    border-color: #f76b1c;
+}
+
+#habit-form button {
+    background: #f76b1c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#habit-form button:hover {
+    background: #fda085;
+}
+
+#habit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#habit-list li {
+    background: #fff7f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(247,107,28,0.07);
+    font-size: 1rem;
+    transition: box-shadow 0.2s;
+}
+#habit-list li:last-child {
+    margin-bottom: 0;
+}
+
+.habit-title {
+    font-weight: 500;
+    color: #f76b1c;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.habit-actions button {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.habit-actions .done-btn {
+    background: #e0ffe0;
+    color: #1c7f2c;
+}
+.habit-actions .done-btn:hover {
+    background: #b6fcb6;
+}
+
+.habit-actions .delete-btn {
+    background: #ffe0e0;
+    color: #c91c1c;
+}
+.habit-actions .delete-btn:hover {
+    background: #fcb6b6;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px 6px 12px 6px;
+        max-width: 98vw;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    #habit-form button {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+    #habit-input {
+        font-size: 0.95rem;
+    }
+    #habit-list li {
+        font-size: 0.95rem;
+        padding: 8px 8px;
+    }
+} 
+
