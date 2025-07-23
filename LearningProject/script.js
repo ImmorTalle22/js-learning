@@ -1,5 +1,6 @@
 const form = document.querySelector('#habit-form');
 let habitList = [];
+const habitListEl = document.querySelector('#habit-list');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -7,6 +8,7 @@ form.addEventListener('submit', function(event) {
     const isDuplicate = habitList.find(item => item.name.toLowerCase() === habitInput);
     if (!isDuplicate && habitInput){
         habitList.push({name: habitInput, count: 0});
+        setItemHabit();
         renderHabits();
     } else {
         console.log("Повторка");
@@ -14,32 +16,52 @@ form.addEventListener('submit', function(event) {
     form.reset();
 })
 
+function sortHabits() {
+    habitList.sort((a, b) => b.count - a.count);
+}
 
 function renderHabits() {
-    const habitListEl = document.querySelector('#habit-list');
-    habitListEl.innerHTML = '';
+    let html = '';    
+    sortHabits();
     habitList.forEach((habit, index) => {
-        habitListEl.innerHTML += `
-            <li data-index="${index}">
-                <span>${habit.name} — <b>${habit.count}</b></span>
+        html += `
+                <li data-index="${index}">
+                <span>${habit.name.charAt(0).toUpperCase() + habit.name.slice(1)} — <b>${habit.count}</b></span>
                 <button class="done-button">Выполнено</button>
                 <button class="delete-button">Удалить</button>
             </li>`;
     });
+    habitListEl.innerHTML = html;
 }
-
-const habitListEl = document.querySelector('#habit-list');
 
 habitListEl.addEventListener('click', function(event) {
     if (event.target.classList.contains('done-button')) {
         const index = event.target.closest('li').dataset.index;
         habitList[index].count++;
         renderHabits();
+        setItemHabit();
     }
     if (event.target.classList.contains('delete-button')) {
         const index = event.target.closest('li').dataset.index;
-        habitList.splice(index, 1);
-        renderHabits();
+        const isConfirm = confirm("Вы точно хотите удалить привычку?");
+        if (isConfirm) {    
+            habitList.splice(index, 1);
+            renderHabits();
+            setItemHabit();
+        }
     }
 })
 
+function setItemHabit() {
+    localStorage.setItem('habitList', JSON.stringify(habitList));
+}
+
+function getItemHabit() {
+    const savedHabits = localStorage.getItem('habitList');
+    if (savedHabits) {
+        habitList = JSON.parse(savedHabits); 
+        renderHabits();
+    }
+}
+
+getItemHabit();
