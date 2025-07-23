@@ -1,0 +1,291 @@
+@media (max-width: 1700px) {
+  .header__nav {
+    padding-left: 0;
+  }
+
+  .main__card {
+    flex-direction: column;
+  }
+
+  .main__content-block {
+    height: 640px;
+    margin: 0 0 32px 0;
+  }
+
+  .main__content {
+    justify-content: space-between;
+  }
+
+  .main__card-text {
+    justify-content: unset;
+  }
+
+  .main__card-title {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    padding: 0 75px;
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .header__nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-text {
+    font-size: 60px;
+    line-height: 73px;
+  }
+
+  .hero-content {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .main__card-title {
+    font-size: 23px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hero-container {
+    background: url(../img/low-angles-balcone_1024.png) no-repeat bottom;
+    border-radius: 32px;
+    padding: 100px 40px;
+  }
+
+  .hero-text {
+    font-size: 45px;
+    line-height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .hero-content {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 60px;
+  }
+
+  .main__about-us {
+    padding-top: 35px;
+  }
+
+  .main__text {
+    margin-bottom: 60px;
+  }
+
+  .main__content {
+    padding: 34px 40px;
+  }
+
+  .main__content-text {
+    margin-right: 47px;
+  }
+
+  .main__card-block {
+    padding: 35px;
+  }
+
+  .main__card-image {
+    width: 114px;
+    margin-right: 16px;
+  }
+
+  .main__card-title {
+    font-size: 21px;
+  }
+
+  .main__card-description {
+    font-size: 15px;
+  }
+
+
+}
+
+@media (max-width: 768px){
+  .container {
+    max-width: 960px;
+    padding: 0 50px;
+  }
+
+  .header {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .header__logo {
+    width: 150px;
+    height: 48px;
+  }
+
+  .hero-container {
+    background: url(../img/low-angle-balconies_768.png) no-repeat bottom;
+    border-radius: 24px;
+  }
+
+  .hero-text {
+    font-size: 35px;
+    line-height: 46px;
+    margin-bottom: 16px;
+  }
+
+  .hero-content {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 60px;
+  }
+
+  .main__content {
+    padding: 34px;
+  }
+
+  .main__content-text {
+    margin-right: 6px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .main__card-description {
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero-text {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .hero-content {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .main__content {
+    display: none;
+  }
+
+  .main__text {
+    margin-bottom: 14px;
+  }
+
+  .main__content-block {
+    height: 250px;
+  }
+
+  .main__content-text {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
+  .main__content__media {
+    display: block;
+  }
+
+  .main__card-block {
+    border: none;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .main__card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .main__card-description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .main__card-image {
+    width: 100px;
+    height: 90px;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .header__logo {
+    width: 110px;
+    height: 35px;
+  }
+
+  .header {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 21px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .hero-content {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .hero-button {
+    border-radius: 8px;
+    padding: 13px 28px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .main__about-us {
+    padding-top: 60px;
+  }
+
+  .main__title{
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .main__text {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .main__card-image {
+    width: 69px;
+    height: 60px;
+  }
+
+  .main__card-title {
+    margin-bottom: 4px;
+  }
+}
